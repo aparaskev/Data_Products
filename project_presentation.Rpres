@@ -1,0 +1,38 @@
+Car driving safety - Relationship between car speed and stoping distance
+========================================================
+author: Athanasios Paraskevas
+date: `r date()`
+
+Summary
+========================================================
+
+Driving a car with safety is a major issue for a variety of socioeconomic reasons.
+By taking this into consideration, we created an application that calculates the distance
+that a car makes till it stops, when a driver brakes from a specific speed.
+
+Introduction
+========================================================
+
+In order to be able to calculate the stoping distance, we created a linear regression model based of the provided dataset of R named *cars*
+
+```{r}
+summary(cars)
+```
+
+Linear regression Model
+========================================================
+
+
+```{r, echo=FALSE}
+model <- lm(dist~speed, data=cars)
+plot(cars)
+abline(model, color="red")
+```
+
+Application
+========================================================
+
+The specific application predicts the distance that a car needs in order to stop by taking into consideration a specific value of speed. The user of this application can simply enter a value for speed and then press the button submit. The linear model should then calculate and demonstate the predicted value of stopping distance. 
+
+Enjoy ...
+========================================================
